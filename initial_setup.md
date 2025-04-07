@@ -6,6 +6,10 @@ This will contain examples, troubleshooting and a brief explanation what is happ
 ### Getting Started
 The library used in all the networking-related scripts is **NetcodeGO**. It is the flagship networking library for Unity and as such can be installed easily using the package manager.
 
+1. Do this by going to **Window > Package Manager**
+2. Selecting **Packages: Unity Registry** from the top.
+3. Importing *Netcode for Game Objects*, *TextMeshPro*
+
 If integrating AR for the MetaQuest3 you must:
 - Create a Meta developer account (online)
 - Connect using the Oculus app and enable developer mode

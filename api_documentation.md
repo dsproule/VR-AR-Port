@@ -2,6 +2,8 @@
 
 ### These are the set of functions provided as is. They act as examples for further expansion but also the minimum likely needed for a VR-AR port. 
 
+To make a component responsive to the following API, I assume we have a connection to the RpcHandler and the Object has been registered. If not, go to the bottom for a tutorial on how to do this.
+
 ---
 
 ## SpawnRequest
@@ -12,7 +14,7 @@ void SpawnRequest(string NetPrefabName, Vector3 pos, string targetObj=null,
 ```
 Spawns the networked object.
 
-- `NetPrefabName`          — Name of the prefab to instantiate.
+- `NetPrefabName`          — Name of the prefab to instantiate as it exists in prefabList.
 - `pos`                    — Position in world space where the object should spawn.
 - `targetObj` *(optional)* — Label for tracking or parenting later.
 - `tag` *(optional)*       — Tag to apply to the spawned GameObject.
@@ -101,3 +103,10 @@ GameObject RetrRegObj(string objLabel);
 Retrieves a GameObject from the registered object dictionary.
 
 - `objLabel` — Label assigned during `SpawnRequest`.
+
+To connect a prefab to the API:
+
+1. Attach **Client Network Transform** and **Network Object** in the components section of the prefab
+![Screenshot to show network components](ref_images/network_components.png)
+2. Insert the prefab as a new entry to **Network Prefabs List**
+![Screenshot of prefab list](ref_images/prefab_list.png)
