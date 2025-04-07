@@ -1,0 +1,12 @@
+# Unity specific
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+
+# Package manager cache
+Packages/manifest.json
+Packages/packages-lock.json
+**/PackageCache/
