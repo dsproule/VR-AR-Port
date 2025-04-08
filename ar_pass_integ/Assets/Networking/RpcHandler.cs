@@ -13,11 +13,6 @@ public class RpcHandler : NetworkBehaviour
     private Dictionary<string, ulong> registeredObjs = new Dictionary<string, ulong>();
     GameObject localUpdateText;
 
-    private void Awake()
-    {
-        //stats = new CharacterStats();
-    }
-
 
     private void Init()
     {
@@ -175,6 +170,7 @@ public class RpcHandler : NetworkBehaviour
     [ClientRpc]
     private void LinkHandControllerClientRpc(ulong netId, uint handCount)
     {
+        return;
         GameObject mirrorObj;
         ObjSync mirrorSync;
         GameObject hand;
@@ -205,8 +201,6 @@ public class RpcHandler : NetworkBehaviour
     [ClientRpc]
     private void InitClientRpc()
     {
-        SpawnRequest("Compass", new Vector3(0,0,1), "Compass");
-        SpawnRequest("RotFeedback", new Vector3(0, 0, -1), "Pivot");
         Init();
     }
 

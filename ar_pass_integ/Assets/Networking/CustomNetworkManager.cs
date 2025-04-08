@@ -44,7 +44,7 @@ public class CustomNetworkManager : NetworkManager
         var networkPrefabs = networkManager.NetworkConfig.Prefabs.Prefabs;
         Debug.Log("Client has joined!");
 
-        if (extraConfig.isTesting)
+        if (extraConfig.disableHands)
             return;
         /* Spawn the hands */
         foreach (var networkPrefab in networkPrefabs)

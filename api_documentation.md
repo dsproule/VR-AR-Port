@@ -104,6 +104,19 @@ Retrieves a GameObject from the registered object dictionary.
 
 - `objLabel` — Label assigned during `SpawnRequest`.
 
+## ResetARSync
+
+```csharp
+void ResetARSync(Vector3 pos_offset, Quaternion rot_offset);
+```
+
+Aligns the AR environment with VR.
+
+- `pos_offset` — Reference position in the VR environment
+- `rot_offset` — Reference rotation in the VR environment
+
+There are many other reasonably documented functions within the RpcHandler.cs file defined. These are the main, most utilized ones.
+
 To connect a prefab to the API:
 
 1. Attach **Client Network Transform** and **Network Object** in the components section of the prefab
